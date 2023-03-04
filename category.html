@@ -33,21 +33,53 @@
 <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
 <!-- Magnific Popup CSS -->
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
+<!-- jquery-ui CSS -->
+<link rel="stylesheet" href="assets/css/jquery-ui.css">
 <!-- Slick CSS -->
 <link rel="stylesheet" href="assets/css/slick.css">
 <link rel="stylesheet" href="assets/css/slick-theme.css">
 <!-- Style CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
-
-
 <style>
-    .login_wrap {
-        box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+    .carousel .indicators_style3 button {
+        background-color: #333;
+        margin: 5px;
+        position: relative;
     }
-    .form__register .padding_eight_all form button,
-    .form__login .padding_eight_all form button {
-        width: unset;
+    .deal_wrap {
+        border: 2px solid #A7A7A7;
+    }
+
+    .deal_wrap .deal_content .product_action .pr_action_btn li a {
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .deal_wrap .deal_content .product_action .pr_action_btn li a i {
+        line-height: 35px;
+        font-size: 16px;
+    }
+
+    /* -------------------------------------------------
+    min-width: 768px
+    ---------------------------------------------------*/
+    @media only screen and (min-width: 768px) {
+        .deal_content .product_action .pr_action_btn {
+            margin: 0;
+        }
+    }
+
+    /* -------------------------------------------------
+    max-width: 767px
+    ---------------------------------------------------*/
+    @media only screen and (max-width: 767px) {
+        .deal_content .product_action .pr_action_btn {
+            margin: 0 auto;
+        }
     }
 </style>
 </head>
@@ -64,82 +96,32 @@
 </div>
 <!-- END LOADER -->
 
-<!-- Home Popup Section -->
-<div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
-                </button>
-                <div class="row g-0">
-                    <div class="col-sm-5">
-                    	<div class="background_bg h-100" data-img-src="assets/images/popup_img.jpg"></div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="popup_content">
-                            <div class="popup-text">
-                                <div class="heading_s4">
-                                    <h4>Subscribe and Get 25% Discount!</h4>
-                                </div>
-                                <p>Subscribe to the newsletter to receive updates about new products.</p>
-                            </div>
-                            <form method="post">
-                            	<div class="form-group mb-3">
-                                	<input name="email" required type="email" class="form-control rounded-0" placeholder="Enter Your Email">
-                                </div>
-                                <div class="form-group mb-3">
-                                	<button class="btn btn-fill-line btn-block text-uppercase rounded-0" title="Subscribe" type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                            <div class="chek-form">
-                                <div class="custome-checkbox">
-                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
-                                    <label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    	</div>
-    </div>
-</div>
-<!-- End Screen Load Popup Section --> 
-
 <!-- START HEADER -->
 <header class="header_wrap fixed-top header_with_topbar">
-	<div class="top-header">
-        <div class="container">
+    <div class="top-header light_skin bg_dark d-none d-md-block">
+        <div class="custom-container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                	<div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                        <div class="lng_dropdown me-2">
-                            <select name="countries" class="custome_select">
-                                <option value='en' data-image="assets/images/eng.png" data-title="English">English</option>
-                                <option value='fn' data-image="assets/images/fn.png" data-title="France">France</option>
-                                <option value='us' data-image="assets/images/us.png" data-title="United States">United States</option>
-                            </select>
+                <div class="col-lg-6 col-md-8">
+                    <div class="header_topbar_info">
+                        <div class="header_offer">
+                            <span>Free Ground Shipping Over $250</span>
                         </div>
-                        <div class="me-3">
-                            <select name="countries" class="custome_select">
-                                <option value='USD' data-title="USD">USD</option>
-                                <option value='EUR' data-title="EUR">EUR</option>
-                                <option value='GBR' data-title="GBR">GBR</option>
-                            </select>
+                        <div class="download_wrap">
+                            <span class="me-3">Download App</span>
+                            <ul class="icon_list text-center text-lg-start">
+                                <li><a href="#"><i class="fab fa-apple"></i></a></li>
+                                <li><a href="#"><i class="fab fa-android"></i></a></li>
+                                <li><a href="#"><i class="fab fa-windows"></i></a></li>
+                            </ul>
                         </div>
-                        <ul class="contact_detail text-center text-lg-start">
-                            <li><i class="ti-mobile"></i><span>123-456-7890</span></li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                	<div class="text-center text-md-end">
-                       	<ul class="header_list">
-                        	<li><a href="compare.html"><i class="ti-control-shuffle"></i><span>Compare</span></a></li>
-                            <li><a href="wishlist.html"><i class="ti-heart"></i><span>Wishlist</span></a></li>
-                            <li><a href="login.html"><i class="ti-user"></i><span>Login</span></a></li>
-						</ul>
+                    <div class="text-center text-md-end">
+                        <ul class="header_list">
+                            <li><a href="wishlist.html"><i class="fa fa-heart"></i><span>Wishlist</span></a></li>
+                            <li><a href="login.html"><i class="fa fa-sign-in-alt" aria-hidden="true"></i><span>Login</span></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -171,14 +153,14 @@
                             </div>   
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle nav-link active" href="#" data-bs-toggle="dropdown">Pages</a>
+                            <a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
                                 <ul> 
                                     <li><a class="dropdown-item nav-link nav_item" href="about.html">About Us</a></li> 
                                     <li><a class="dropdown-item nav-link nav_item" href="contact.html">Contact Us</a></li> 
                                     <li><a class="dropdown-item nav-link nav_item" href="faq.html">Faq</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="404.html">404 Error Page</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item active" href="login.html">Login</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item" href="login.html">Login</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="signup.html">Register</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="term-condition.html">Terms and Conditions</a></li>
                                 </ul>
@@ -316,7 +298,7 @@
                             </div>
                         </li>
                         <li class="dropdown dropdown-mega-menu">
-                            <a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown">Shop</a>
+                            <a class="dropdown-toggle nav-link active" href="#" data-bs-toggle="dropdown">Shop</a>
                             <div class="dropdown-menu">
                                 <ul class="mega-menu d-lg-flex">
                                     <li class="mega-menu-col col-lg-9">
@@ -329,7 +311,7 @@
                                                     <li><a class="dropdown-item nav-link nav_item" href="shop-list-right-sidebar.html">shop List Right Sidebar</a></li>
                                                     <li><a class="dropdown-item nav-link nav_item" href="shop-left-sidebar.html">Left Sidebar</a></li>
                                                     <li><a class="dropdown-item nav-link nav_item" href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                    <li><a class="dropdown-item nav-link nav_item" href="shop-load-more.html">Shop Load More</a></li>
+                                                    <li><a class="dropdown-item nav-link nav_item active" href="shop-load-more.html">Shop Load More</a></li>
                                                 </ul>
                                             </li>
                                             <li class="mega-menu-col col-lg-4">
@@ -419,14 +401,14 @@
         <div class="row align-items-center">
         	<div class="col-md-6">
                 <div class="page-title">
-            		<h1>Login</h1>
+            		<h1>Category Name</h1>
                 </div>
             </div>
             <div class="col-md-6">
                 <ol class="breadcrumb justify-content-md-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active">Login</li>
+                    <li class="breadcrumb-item active">Category</li>
                 </ol>
             </div>
         </div>
@@ -437,66 +419,331 @@
 <!-- START MAIN CONTENT -->
 <div class="main_content">
 
-<!-- START LOGIN SECTION -->
-<div class="login_register_wrap section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-md-10">
-                <div class="login_wrap form__register">
-                    <div class="padding_eight_all bg-white">
-                        <div class="heading_s1">
-                            <h3>Register</h3>
+<!-- START SECTION SHOP -->
+<div class="section">
+	<div class="container">
+    	<div class="row">
+			<div class="col-lg-9">
+            	<div class="row align-items-center mb-4 pb-1">
+                    <div class="col-12">
+                        <div class="product_header">
+                            <div class="product_header_left">
+                                <div class="custom_select">
+                                    <select class="form-control form-control-sm">
+                                        <option value="order">Default Sorting</option>
+                                        <option value="popularity">Sort by popularity</option>
+                                        <option value="date">Sort by newness</option>
+                                        <option value="price">Sort by price: low to high</option>
+                                        <option value="price-desc">Sort by price: high to low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product_header_right">
+                                <div class="custom_select">
+                                    <select class="form-control form-control-sm">
+                                        <option value="">Showing</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <form method="post">
-                            <div class="form-group mb-3">
-                                <input type="text" required="" class="form-control" name="email" placeholder="Email Address*">
-                            </div>
-                            <div class="form-group mb-3">
-                                <input class="form-control" required="" type="password" name="password" placeholder="Password*">
-                            </div>
-                            <div class="form-group mb-3">
-                                <input class="form-control" required="" type="password" name="password" placeholder="Confirm Password*">
-                            </div>
-                            <div class="form-group mb-3">
-                                <button type="submit" class="btn btn-fill-out btn-block" name="register">Register</button>
-                            </div>
-                        </form>
                     </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-10">
-                <div class="mb-sm-4 login_wrap form__login">
-                    <div class="padding_eight_all bg-white">
-                        <div class="heading_s1">
-                            <h3>Login</h3>
-                        </div>
-                        <form method="post">
-                            <div class="form-group mb-3">
-                                <input type="text" required="" class="form-control" name="email" placeholder="Username or Email Address*">
+                </div> 
+                <div class="row shop_container">
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img loading="lazy" src="assets/images/product_img1.jpg" alt="product_img1">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <input class="form-control" required="" type="password" name="password" placeholder="Password*">
-                            </div>
-                            <div class="login_footer form-group mb-3">
-                                <div class="chek-form">
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
-                                        <label class="form-check-label" for="exampleCheckbox1"><span>Remember me</span></label>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">Blue Dress For Woman</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$45.00</span>
+                                    <del>$55.25</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:80%"></div>
                                     </div>
                                 </div>
-                                <a href="#">Lost Your password?</a>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <button type="submit" class="btn btn-fill-out btn-block" name="login">Log in</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img src="assets/images/product_img2.jpg" alt="product_img2">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">Lether Gray Tuxedo</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$55.00</span>
+                                    <del>$95.00</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:68%"></div>
+                                    </div>
+                                </div>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img src="assets/images/product_img3.jpg" alt="product_img3">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">woman full sliv dress</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$68.00</span>
+                                    <del>$99.00</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:87%"></div>
+                                    </div>
+                                </div>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img src="assets/images/product_img4.jpg" alt="product_img4">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">light blue Shirt</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$69.00</span>
+                                    <del>$89.00</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:70%"></div>
+                                    </div>
+                                </div>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img src="assets/images/product_img5.jpg" alt="product_img5">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-compare.html" class="popup-ajax"><i class="icon-shuffle"></i></a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">blue dress for woman</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$45.00</span>
+                                    <del>$55.25</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:80%"></div>
+                                    </div>
+                                </div>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
+                                <div class="list_product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 grid_item">
+                        <div class="product">
+                            <div class="product_img">
+                                <a href="shop-product-detail.html">
+                                    <img src="assets/images/product_img6.jpg" alt="product_img6">
+                                </a>
+                                <div class="product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product_info">
+                                <h6 class="product_title"><a href="shop-product-detail.html">Blue casual check shirt</a></h6>
+                                <div class="product_price">
+                                    <span class="price">$55.00</span>
+                                    <del>$95.00</del>
+                                </div>
+                                <div class="rating_wrap">
+                                    <div class="rating">
+                                        <div class="product_rate" style="width:68%"></div>
+                                    </div>
+                                </div>
+                                <div class="pr_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                </div>
+                                <div class="list_product_action_box">
+                                    <ul class="list_none pr_action_btn">
+                                        <li class="add-to-cart"><a href="#"><i class="icon-basket-loaded"></i> Add To Cart</a></li>
+                                        <li><a href="shop-quick-view.html" class="popup-ajax"><i class="icon-magnifier-add"></i></a></li>
+                                        <li><a href="#"><i class="icon-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center load_more_wrap">
+                            <button id="load-more" class="btn btn-fill-out">Load More</button>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="col-lg-3 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h5 class="widget_title">Filter</h5>
+                        <div class="filter_price">
+                             <div id="price_filter" data-min="0" data-max="500" data-min-value="0" data-max-value="500" data-price-sign="$"></div>
+                             <div class="price_range">
+                                 <span>Price: <span id="flt_price"></span></span>
+                                 <input type="hidden" id="price_first">
+                                 <input type="hidden" id="price_second">
+                             </div>
+                         </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="widget_title">Brand</h5> 
+                        <ul class="list_brand">
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Alienware" value="">
+                                    <label class="form-check-label" for="Alienware"><span>Alienware</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Dell" value="">
+                                    <label class="form-check-label" for="Dell"><span>Dell</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="Samsung" value="">
+                                    <label class="form-check-label" for="Samsung"><span>Samsung</span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget">
+                        <h5 class="widget_title">Hard Drive</h5> 
+                        <ul class="list_brand">
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="1TB" value="">
+                                    <label class="form-check-label" for="1TB"><span>1TB</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="500GB" value="">
+                                    <label class="form-check-label" for="500GB"><span>500GB</span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget">
+                        <h5 class="widget_title">Processor</h5> 
+                        <ul class="list_brand">
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="9th-gen" value="">
+                                    <label class="form-check-label" for="9th Gen Intel Core"><span>9th Gen Intel Core</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="500GB" value="">
+                                    <label class="form-check-label" for="7th Gen Intel Core"><span>7th Gen Intel Core</span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- END LOGIN SECTION -->
+<!-- END SECTION SHOP -->
 
 <!-- START SECTION SUBSCRIBE NEWSLETTER -->
 <div class="section bg_default small_pt small_pb">
@@ -628,6 +875,8 @@
 
 <!-- Latest jQuery --> 
 <script src="assets/js/jquery-3.6.0.min.js"></script> 
+<!-- jquery-ui --> 
+<script src="assets/js/jquery-ui.js"></script>
 <!-- popper min js -->
 <script src="assets/js/popper.min.js"></script>
 <!-- Latest compiled and minified Bootstrap --> 
@@ -650,6 +899,8 @@
 <script src="assets/js/jquery.dd.min.js"></script>
 <!-- slick js -->
 <script src="assets/js/slick.min.js"></script>
+<!-- isotope-loadmore js -->
+<!-- <script src="assets/js/isotope-loadmore.js"></script> -->
 <!-- elevatezoom js -->
 <script src="assets/js/jquery.elevatezoom.js"></script>
 <!-- scripts js --> 
